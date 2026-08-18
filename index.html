@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="icon" href="./IMG/Encabezado.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body>
+    
+    <main>
+
+    <div>
+        <header>
+            <img src="./IMG/logo.png" alt="Logo">
+            <h1>Registro</h1>
+            <p>Ingrese sus datos para Registrarse</p>
+        </header>
+    </div>
+
+        <form>
+
+            <div>
+                <label>Nombre</label>
+                <input type="text" placeholder="EJ: Cristiano" required>
+            </div>
+
+            <div>    
+                <label>Apellido</label>
+                <input type="text" placeholder="EJ: Ronaldo" required>
+            </div>
+
+            <div>
+                <label>Correo Electrónico</label>
+                <input type="email" placeholder="email@mail.com" required>
+            </div>
+        
+            <div>
+                <label>Selecciona su Tipo de Documento</label>
+                <select name="tipo_doc" required>
+                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="CC">Cédula de Ciudadanía</option>
+                    <option value="PA">Pasaporte</option>
+                    <option value="CE">Cédula de Extranjería</option>
+                    <option value="PPT">PPT (Protección Temp.)</option>
+                    <option value="PEP">PEP (Permiso Especial)</option>
+                    <option value="NIT">NIT (Id. Tributaria)</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Número de Documento</label>
+                <input type="text" placeholder="EJ: 1234567890" required>
+            </div>
+
+            <div>
+                <label>Número de Teléfono</label>
+                <input type="tel" placeholder="+57 3125723901" required>
+            </div>
+
+            <div>
+                <label>País de Residencia</label>
+                <input type="text" placeholder="Colombia" required>
+            </div>
+
+            <div>
+                <label>Ciudad de Residencia</label>
+                <input type="text" placeholder="Bogotá D.C" required>
+            </div>
+
+            <div>
+                <label>Ingrese su Fecha de Nacimiento</label>
+                <input type="date" max="2008-08-13" required>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" required>
+                    <span>
+                        Acepto la 
+                        <a href="#">Política de Privacidad</a>
+                        y el tratamiento de mis datos.
+                    </span>
+                </label>
+            </div>
+
+            <div>
+                <button type="submit">Registrarse</button>
+            </div>   
+            
+        </form>
+    </main>
+    
+</body>
+</html>

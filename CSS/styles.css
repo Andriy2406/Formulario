@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: #E3F2FD;
+    display: grid;
+    place-items: center;
+    min-height: 100dvh;
+}
+
+main {
+    background-color: #fff;
+    display: grid;
+    gap: 28px;
+    width: min(100%, 540px);
+    padding: 24px;
+    padding-top: 10px;
+    border-radius: 16px;
+}
+
+
+main > div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+}
+
+main img {
+    width: 60px !important;
+    display: block;
+    margin-inline: auto;
+    margin-bottom: -10px;
+}
+
+main > header h1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #1A1D20;
+}
+
+main > header p {
+    font-size: 13px;
+    color: #64748B;
+}
+
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 24px;
+    color: #151515;
+    font-size: 13px;
+}
+
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+form > div:nth-of-type(3) {
+    grid-column: 1 / -1;
+}
+
+
+form > div :is(input:not([type="checkbox"]), select, textarea) {
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    outline: 0;
+    background: transparent;
+    border: 1px solid #d1d1d1;
+}
+
+
+form :is(input, select, textarea, button):focus {
+    border-color: #2563EB;
+    outline: 2px solid rgba(37, 99, 235, 0.2);
+}
+
+
+form > label {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+form > label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+form > label a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #2563EB;
+}
+
+form > label a:hover {
+    text-decoration: underline;
+}
+
+
+form > div > button[type="submit"] {
+    grid-column: 1 / -1;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px;
+    color: #fff;
+    border: 0;
+    background: linear-gradient(to right, #1d4ed8, #3b82f6);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form > div > button[type="submit"]:hover {
+    background: linear-gradient(to left, #1d4ed8, #3b82f6);
+}
+
+
+form > div:has([required]) label::after {
+    content: '*';
+    color: #dc2626;
+    font-weight: bold;
+}
+
+form > div:has([required]) label {
+    display: flex;
+    gap: 4px;
+}
+
+
+@media(width <= 550px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+    main {
+        border-radius: 0;
+    }
+}
+
+form > div:has(input[type="checkbox"]),
+form > div:has(button[type="submit"]) {
+    grid-column: 1 / -1;
+}
