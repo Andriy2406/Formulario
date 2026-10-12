@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="icon" href="./IMG/Encabezado.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body>
+    
+    <main id="main">
+
+    <div>
+        <header id="header">
+            <img id="logo" src="./IMG/logo.png" alt="Logo">
+            <h1 id="titulo">Registro</h1>
+            <p id="descripcion">Ingrese sus datos para Registrarse</p>
+        </header>
+    </div>
+
+    <div>
+        <form id="formulario">
+
+            <div>
+                <label>Nombre</label>
+                <input id="nombre" type="text" placeholder="EJ: Cristiano" required>
+            </div>
+
+            <div>    
+                <label>Apellido</label>
+                <input id="apellido" type="text" placeholder="EJ: Ronaldo" required>
+            </div>
+
+            <div>
+                <label>Correo Electrónico</label>
+                <input id="email" type="email" placeholder="email@mail.com" required>
+            </div>
+        
+            <div>
+                <label>Seleccione su Tipo de Documento</label>
+                <select id="tipo_doc" name="tipo_doc" required>
+                    <option value="" disabled>Seleccione una opción</option>
+                    <option value="13" selected>Cédula de Ciudadanía</option>
+                    <option value="41">Pasaporte</option>
+                    <option value="22">Cédula de Extranjería</option>
+                    <option value="48">PPT (Protección Temp.)</option>
+                    <option value="47">Permiso Especial</option>
+                    <option value="31">NIT (Id. Tributaria)</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Número de Documento</label>
+                <input id="numero_doc" type="text" placeholder="EJ: 1234567890" required>
+            </div>
+
+            <div>
+                <label>Número de Teléfono</label>
+                <input id="telefono" type="tel" placeholder="+57 3125723901" required>
+            </div>
+
+            <div>
+                <label>Ingrese su Fecha de Nacimiento</label>
+                <input id="fecha" type="date" max="2008-08-13" required>
+            </div>
+
+            <div>
+                <label>Seleccione su País de Residencia</label>
+                <select name="pais" id="pais" required>
+                    <option value="" disabled>Seleccione una opción</option>
+                    <option value="169" selected>Colombia</option>
+                    <option value="607" >Portugal</option>
+                    <option value="245" >España</option>
+                    <option value="105" >Brasil</option>
+                    <option value="275" >Francia</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Seleccione su Ciudad de Residencia</label>
+                <select name="ciudad" id="ciudad">
+                    <option value="" disabled>Seleccione una opción</option>
+                    <option value="11001" selected>Bogotá</option>
+                    <option value="73001">Tolima</option>
+                    <option value="76001">Cali</option>
+                    <option value="607">Lisboa</option>
+                    <option value="607">Oporto</option>
+                    <option value="607">Braga</option>
+                    <option value="245">Madrid</option>
+                    <option value="245">Sevilla</option>
+                    <option value="245">Barcelona</option>
+                    <option value="105">São Paulo</option>
+                    <option value="105">Río de Janeiro</option>
+                    <option value="105">Brasilia</option>
+                    <option value="275">París</option>
+                    <option value="275">Marsella</option>
+                    <option value="275">Lyon</option>
+                </select>
+            </div>
+
+            
+
+            <div>
+                <label>
+                    <input id="terminos" type="checkbox" required>
+                    <span >
+                        Acepto la 
+                        <a id="link-privacidad" href="#">Política de Privacidad</a>
+                        y el tratamiento de mis datos.
+                    </span>
+                </label>
+            </div>
+
+            <div>
+                <button id="btn-enviar" type="submit">Registrarse</button>
+            </div>   
+            
+        </form>
+    </div>
+    </main>
+    
+</body>
+</html>
